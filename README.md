@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# uppercaseband-reactjs
+
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/markdeleon01/uppercaseband-reactjs/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/markdeleon01/uppercaseband-reactjs/tree/master)
+
+As a matter of interest and passion for JavaScript and music in general, I created a ReactJS web application for my band UPPERCASE.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
