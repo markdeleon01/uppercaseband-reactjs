@@ -2,9 +2,38 @@
 # See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
 
+# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
+# See: https://circleci.com/docs/2.0/orb-intro/
+orbs:
+  node: circleci/node@5.1.0
+  browser-tools: circleci/browser-tools@1.4.1
+
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 jobs:
+  frontend-build-test:
+    docker:
+      # the base image can run most needed actions with orbs
+      - image: 'cimg/base:stable'
+    steps:
+      - node/install
+      - checkout
+      - browser-tools/install-chrome
+      - browser-tools/install-chromedriver
+      # use Node v18.14.0
+      - run:
+          name: Swap node versions
+          command: |
+            set +e
+            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+            nvm install 18.14.0
+            nvm alias default 18.14.0
+
+            echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
+            echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
@@ -21,6 +50,9 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
+  frontend-build-test-workflow:
+    jobs:
+      - frontend-build-test
   say-hello-workflow:
     jobs:
       - say-hello
