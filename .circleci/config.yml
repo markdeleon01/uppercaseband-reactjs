@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Front-End Build
           command: |
-            npm run build
+            npm run lint &&  npm run build
       - run:
           name: Check browser installation
           command: |
