@@ -43,7 +43,7 @@ jobs:
       - run:
           name: Front-End Build
           command: |
-            npm run lint &&  npm run build
+            npm run lint && npm run build
       - run:
           name: Check browser installation
           command: |
@@ -58,7 +58,12 @@ jobs:
       - run:
           name: Front-End Unit Tests
           command: |
-            npm run test-ci
+            npm run test:unit
+      # run front-end e2e tests
+      - run:
+          name: Front-End e2e Tests
+          command: |
+            npm run test:component && npm run test:ci
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
