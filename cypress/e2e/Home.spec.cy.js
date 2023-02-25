@@ -10,4 +10,9 @@ describe('Test the home page', () => {
 		cy.get('#nav').should('have.length', 1)
 		cy.get('#nav > a').should('have.length', 4)
 	})
+
+	it('has content links', () => {
+		cy.visit('http://localhost:3000/')
+        cy.get('.home').find('a').should('have.length', 3)
+	})
 })
