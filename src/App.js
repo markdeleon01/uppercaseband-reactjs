@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import PageLayout from './components/PageLayout'
 import Home from './pages/Home'
 import About from './pages/About'
+import Discography from './pages/Discography'
+import Events from './pages/Events'
 
 const router = createBrowserRouter([
   {
@@ -19,14 +21,12 @@ const router = createBrowserRouter([
       {
         path: '/about', element: <About />
       },
-      /*
       {
         path: '/discography', element: <Discography />
       },
       {
         path: '/events', element: <Events />
       }
-      */
     ]
   }
 ])
