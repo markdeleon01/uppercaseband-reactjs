@@ -3,7 +3,7 @@ import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import PageLayout from './components/PageLayout'
 import Home from './pages/Home'
-
+import About from './pages/About'
 
 const router = createBrowserRouter([
   {
@@ -16,10 +16,10 @@ const router = createBrowserRouter([
       {
         path: '/home', element: <Home />
       },
-      /*
       {
         path: '/about', element: <About />
       },
+      /*
       {
         path: '/discography', element: <Discography />
       },
