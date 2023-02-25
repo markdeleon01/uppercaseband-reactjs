@@ -4,28 +4,34 @@ import { useEffect } from 'react'
 import { membersActions } from '../store/members'
 
 function About() {
+	const members = useSelector((state) => state.members.members)
+	const dispatch = useDispatch()
 
-    const members = useSelector( state => state.members.members )
-    const dispatch = useDispatch()
+	useEffect(() => {
+		async function fetchMembers() {
+			const response = await fetch(
+				'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs/members'
+			)
+			const resData = await response.json()
+			dispatch(membersActions.setMembers(resData))
+		}
 
-    useEffect( () => {
-        async function fetchMembers() {
-            const response = await fetch('https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs/members')
-            const resData = await response.json()
-            dispatch( membersActions.setMembers( resData ) )
-        }
-
-        fetchMembers()
-    }, [])
+		fetchMembers()
+	})
 
 	return (
 		<div className='about'>
 			<h1>U P P E R C A S E</h1>
 			<hr width='50%' align='center' />
 			<h2>Band Members</h2>
-            {
-                members && members.map( member => <p className="member-item" key={member.name}><span>{ member.name } - { member.role }</span></p>)
-            }
+			{members &&
+				members.map((member) => (
+					<p className='member-item' key={member.name}>
+						<span>
+							{member.name} - {member.role}
+						</span>
+					</p>
+				))}
 			<hr width='50%' align='center' />
 			<p className='band-pic'>
 				<img alt='uppercase2019-bandPic.png' src='/uppercase2019-bandPic.png' />
