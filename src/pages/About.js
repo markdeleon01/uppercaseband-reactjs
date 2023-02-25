@@ -2,21 +2,16 @@ import './About.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { membersActions } from '../store/members'
+import { fetchMembers } from '../services/MemberService'
 
 function About() {
 	const members = useSelector((state) => state.members.members)
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		async function fetchMembers() {
-			const response = await fetch(
-				'https://my-json-server.typicode.com/markdeleon01/uppercaseband-reactjs/members'
-			)
-			const resData = await response.json()
-			dispatch(membersActions.setMembers(resData))
-		}
-
-		fetchMembers()
+		fetchMembers().then( data => {
+            dispatch(membersActions.setMembers(data))
+        })
 	})
 
 	return (
