@@ -9,10 +9,10 @@ function About() {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		fetchMembers().then( data => {
-            dispatch(membersActions.setMembers(data))
-        })
-	})
+		fetchMembers().then((data) => {
+			dispatch(membersActions.setMembers(data))
+		})
+	}, [dispatch])
 
 	return (
 		<div className='about'>
