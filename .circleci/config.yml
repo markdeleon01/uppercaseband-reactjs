@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Front-End Install
           command: |
-            npm install
+            npm install --force
       # build front-end application
       - run:
           name: Front-End Build
