@@ -4,14 +4,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { discographyActions } from '../store/discography'
 import { fetchDiscography } from '../services/DiscographyService'
+import NProgress from 'nprogress'
 
 function Discography() {
+	NProgress.start()
 	const releases = useSelector((state) => state.discography.releases)
 	const dispatch = useDispatch()
 
+	// useEffect hook is called after React updates the DOM
 	useEffect(() => {
 		fetchDiscography().then((data) => {
 			dispatch(discographyActions.setReleases(data))
+		}).then( () => {
+			NProgress.done()
 		})
 	}, [dispatch])
 

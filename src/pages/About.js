@@ -3,14 +3,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { membersActions } from '../store/members'
 import { fetchMembers } from '../services/MemberService'
+import NProgress from 'nprogress'
 
 function About() {
+	NProgress.start()
 	const members = useSelector((state) => state.members.members)
 	const dispatch = useDispatch()
 
+	// useEffect hook is called after React updates the DOM
 	useEffect(() => {
 		fetchMembers().then((data) => {
 			dispatch(membersActions.setMembers(data))
+		}).then( () => {
+			NProgress.done()
 		})
 	}, [dispatch])
 

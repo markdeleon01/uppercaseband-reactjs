@@ -1,6 +1,15 @@
 import './Home.css'
+import { useEffect } from 'react'
+import NProgress from 'nprogress'
 
 function Home() {
+	NProgress.start()
+
+	// useEffect hook is called after React updates the DOM
+	useEffect(() => {
+		NProgress.done()
+	})
+
 	return (
 		<div className='home'>
 			<h1>U P P E R C A S E</h1>
@@ -18,7 +27,8 @@ function Home() {
 				<a
 					href='https://open.spotify.com/artist/6h4pjpssOa3fBNiQmSkgOB'
 					target='blank'
-				>Spotify
+				>
+					Spotify
 				</a>
 				!
 			</p>
@@ -27,7 +37,8 @@ function Home() {
 				<a
 					href='https://www.instagram.com/ang.bandang.uppercase/'
 					target='blank'
-				>Instagram
+				>
+					Instagram
 				</a>
 				!
 			</p>
@@ -36,7 +47,8 @@ function Home() {
 				<a
 					href='https://www.facebook.com/ang.bandang.uppercase/'
 					target='blank'
-				>Facebook
+				>
+					Facebook
 				</a>
 				!
 			</p>
