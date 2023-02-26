@@ -8,6 +8,8 @@ import store from './store/index'
 
 import reportWebVitals from './reportWebVitals';
 
+import 'nprogress/nprogress.css'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

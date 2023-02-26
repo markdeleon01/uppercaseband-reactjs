@@ -4,14 +4,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { eventsActions } from '../store/events'
 import { fetchEvents } from '../services/EventService'
+import NProgress from 'nprogress'
 
 function Events() {
+	NProgress.start()
 	const events = useSelector((state) => state.events.events)
 	const dispatch = useDispatch()
 
+	// useEffect hook is called after React updates the DOM
 	useEffect(() => {
 		fetchEvents().then((data) => {
 			dispatch(eventsActions.setEvents(data))
+		}).then( () => {
+			NProgress.done()
 		})
 	}, [dispatch])
 
