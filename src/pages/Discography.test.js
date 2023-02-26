@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
 
 describe('With React Testing Library', () => {
-    const initialState = { releases: [] }
+	const initialState = { discography: { releases: [] } }
 	const mockStore = configureStore()
 	let store
 
@@ -24,5 +24,5 @@ describe('With React Testing Library', () => {
 		// assert secondary page header
 		const secondaryHeaderElement = screen.getByText(/Discography/i)
 		expect(secondaryHeaderElement).toBeInTheDocument()
-    })
+	})
 })
