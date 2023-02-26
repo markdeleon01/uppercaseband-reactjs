@@ -6,6 +6,8 @@ describe('Test the events page', () => {
 		cy.get('.events').should('have.length', 1)
 		cy.contains('h1', 'U P P E R C A S E')
 		cy.contains('h2', 'Events')
+        cy.get('.event-item').should('exist')
+		cy.get('.event-item').should('have.length', 5)
 	})
 
 	it('clicks the events link', () => {
@@ -16,5 +18,7 @@ describe('Test the events page', () => {
 		cy.get('.events').should('have.length', 1)
 		cy.contains('h1', 'U P P E R C A S E')
 		cy.contains('h2', 'Events')
+        cy.get('.event-item').should('exist')
+		cy.get('.event-item').should('have.length', 5)
 	})
 })
