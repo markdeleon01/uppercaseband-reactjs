@@ -1,5 +1,5 @@
 import React from 'react'
-import Discography from './Discography'
+import Discography from '../../src/pages/Discography'
 
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
