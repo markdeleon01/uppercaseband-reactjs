@@ -11,6 +11,11 @@
 	color: royalblue;
 }
 
+#nav a.nav-link-selected {
+	color: royalblue;
+	text-decoration: none;
+}
+
 @media (max-width: 359px) {
 	#nav {
 		display: grid;
