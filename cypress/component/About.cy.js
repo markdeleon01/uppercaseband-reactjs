@@ -1,5 +1,5 @@
 import React from 'react'
-import About from './About'
+import About from '../../src/pages/About'
 
 import { Provider } from 'react-redux'
 import configureStore from 'redux-mock-store'
