@@ -21,7 +21,7 @@ function DiscographyListing(props) {
 			<img
 				alt={release.imageUrl}
 				className='release-thumbnail'
-				src={'/' + release.imageUrl}
+				src={release.imageUrl}
 			/>
 			<br />
 			<span className='release-title'>{release.title}</span>

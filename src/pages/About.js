@@ -34,7 +34,7 @@ function About() {
 				))}
 			<hr width='50%' align='center' />
 			<p className='band-pic'>
-				<img alt='uppercase2019-bandPic.png' src='/uppercase2019-bandPic.png' />
+				<img alt='uppercase2019-bandPic.png' src='uppercase2019-bandPic.png' />
 			</p>
 			<div className='biography'>
 				<p>
