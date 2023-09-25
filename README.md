@@ -12,6 +12,29 @@ As a matter of interest and passion for JavaScript and music in general, I creat
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project setup
+
+1.  Install NodeJS on your local machine
+2.  Clone this project repository
+3.  Navigate to the project folder and install
+
+```sh
+npm install
+```
+
+4.  Install JSON Server to simulate a backend REST service to deliver data in JSON format to the front-end application
+
+```
+npm install -g json-server
+```
+
+5.  JSON Server will use the _db.json_ file in the project folder to serve mock data as defined in the file
+6.  Run the mock API server
+
+```
+json-server --port 8080 --watch db.json
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
