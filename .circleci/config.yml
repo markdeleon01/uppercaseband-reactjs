@@ -20,7 +20,7 @@ jobs:
       - checkout
       - browser-tools/install-chrome
       - browser-tools/install-chromedriver
-      # use Node v18.17.1
+      # use Node v18.18.0
       - run:
           name: Swap node versions
           command: |
@@ -29,8 +29,8 @@ jobs:
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            nvm install 18.17.1
-            nvm alias default 18.17.1
+            nvm install 18.18.0
+            nvm alias default 18.18.0
 
             echo 'export NVM_DIR="$HOME/.nvm"' >> $BASH_ENV
             echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $BASH_ENV

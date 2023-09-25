@@ -7,7 +7,7 @@ describe('Test the discography page', () => {
 		cy.contains('h1', 'U P P E R C A S E')
 		cy.contains('h2', 'Discography')
         cy.get('.release-item').should('exist')
-		cy.get('.release-item').should('have.length', 5)
+		cy.get('.release-item').should('have.length', 6)
 	})
 
 	it('clicks the discography link', () => {
@@ -19,6 +19,6 @@ describe('Test the discography page', () => {
 		cy.contains('h1', 'U P P E R C A S E')
 		cy.contains('h2', 'Discography')
         cy.get('.release-item').should('exist')
-		cy.get('.release-item').should('have.length', 5)
+		cy.get('.release-item').should('have.length', 6)
 	})
 })

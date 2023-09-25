@@ -47,6 +47,13 @@ describe('<Discography />', () => {
 					imageUrl: 'tanging-ikaw-cover-artwork.png',
 					spotifyUrl:
 						'https://open.spotify.com/album/4qkXXPQF8aiScuCMRuiqM1?si=iRCaY-2kQ9qZp740G-VodQ'
+				},
+				{
+					"title": "'Ligaw Na Tadhana'",
+					"releaseType": "SINGLE",
+					"releaseDate": "Mar 23 2023",
+					"imageUrl": "UPPERCASE-LNT-single.png",
+					"spotifyUrl": "https://open.spotify.com/track/0yQ0RzKaaoiy1xepomQcC0?si=4963648232184926"
 				}
 			]
 		}
