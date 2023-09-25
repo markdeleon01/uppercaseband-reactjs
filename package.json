@@ -2,6 +2,9 @@
 	"name": "uppercaseband-reactjs",
 	"version": "0.1.0",
 	"private": true,
+	"jest": {
+		"coverageReporters": ["json-summary"]
+	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
@@ -14,6 +17,7 @@
 		"test:ci": "start-server-and-test start-server http://localhost:3000 test:e2e",
 		"install:xvfb": "sudo apt-get update && sudo apt-get install libgtk2.0-0 && sudo apt-get install libgtk-3-0 && sudo apt-get install libgbm-dev && sudo apt-get install libnotify-dev && sudo apt-get install libgconf-2-4 && sudo apt-get install libnss3 && sudo apt-get install libxss1 && sudo apt-get install libasound2 && sudo apt-get install libxtst6 && sudo apt-get install xauth && sudo apt-get install xvfb",
 		"lint": "npx eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+		"make-badges": "istanbul-badges-readme",
 		"eject": "react-scripts eject"
 	},
 	"eslintConfig": {
@@ -54,6 +58,7 @@
 		"eslint": "^8.34.0",
 		"eslint-config-react-app": "^7.0.1",
 		"eslint-plugin-cypress": "^2.12.1",
+		"istanbul-badges-readme": "^1.8.5",
 		"start-server-and-test": "^1.15.4"
 	}
 }
