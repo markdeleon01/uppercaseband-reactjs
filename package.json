@@ -9,6 +9,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"coverage": "react-scripts test --coverage",
 		"test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
 		"start-server": "npm start",
 		"test:unit": "npm test -- --coverage --watchAll=false",
