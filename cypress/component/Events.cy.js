@@ -59,6 +59,15 @@ describe('<Events />', () => {
 				content:
 					"<p>UPPERCASE's latest single '<i>Tanging Ikaw</i>' enjoys heavy streaming on Spotify Philippines.</p>",
 				externalUrl: 'https://www.youtube.com/watch?v=KWHDtXBoa2o'
+			},
+			{
+				"id": "601",
+				"title": "'Ligaw Na Tadhana'",
+				"location": "Toronto, Canada",
+				"date": "Mar 23 2023",
+				"imageUrl": "ligaw-na-tadhana.png",
+				"content": "<p>UPPERCASE's latest single '<i>Ligaw Na Tadhana</i>' lyric video:</p>",
+				"externalUrl": "https://youtu.be/Z3nZp2xkFCg?si=t0nPvaDqJWknNHLu"
 			}
 		]
 	}
