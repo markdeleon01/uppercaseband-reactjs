@@ -10,6 +10,8 @@
 
 As a matter of interest and passion for JavaScript and music in general, I created a ReactJS web application for my band UPPERCASE.
 
+The live site can be found on: https://uppercaseband-reactjs.onrender.com
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Project setup
