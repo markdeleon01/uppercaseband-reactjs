@@ -39,19 +39,19 @@ function NavBar() {
 
 	return (
 		<div id='nav'>
-			<Link to='/home' onClick={highlightLink}>
+			<Link data-testid='home-link' to='/home' onClick={highlightLink}>
 				Home
 			</Link>
 			&nbsp;|&nbsp;
-			<Link to='/about' onClick={highlightLink}>
+			<Link data-testid='about-link' to='/about' onClick={highlightLink}>
 				About
 			</Link>
 			&nbsp;|&nbsp;
-			<Link to='/discography' onClick={highlightLink}>
+			<Link data-testid='discography-link' to='/discography' onClick={highlightLink}>
 				Discography
 			</Link>
 			&nbsp;|&nbsp;
-			<Link to='/events' onClick={highlightLink}>
+			<Link data-testid='events-link' to='/events' onClick={highlightLink}>
 				Events
 			</Link>
 		</div>

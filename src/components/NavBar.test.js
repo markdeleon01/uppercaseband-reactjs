@@ -6,8 +6,8 @@ test('renders NavBar', () => {
 	render(<NavBar />, { wrapper: MemoryRouter })
 
 	// assert navigation links
-	expect(screen.getByText(/Home/i)).toBeInTheDocument()
-    expect(screen.getByText(/About/i)).toBeInTheDocument()
-    expect(screen.getByText(/Discography/i)).toBeInTheDocument()
-    expect(screen.getByText(/Events/i)).toBeInTheDocument()
+	expect(screen.getByTestId('home-link')).toBeInTheDocument()
+    expect(screen.getByTestId('about-link')).toBeInTheDocument()
+    expect(screen.getByTestId('discography-link')).toBeInTheDocument()
+    expect(screen.getByTestId('events-link')).toBeInTheDocument()
 })

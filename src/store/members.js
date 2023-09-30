@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const membersSlice = createSlice({
 	name: 'members',
 	initialState: { members: [] },
-	reducers: {
+	reducers: { // actions
         setMembers(state, action) {
             state.members = action.payload
         }

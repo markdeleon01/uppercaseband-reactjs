@@ -11,14 +11,14 @@ function Home() {
 	})
 
 	return (
-		<div className='home'>
-			<h1>U P P E R C A S E</h1>
+		<div data-testid='home' className='home'>
+			<h1 data-testid='home-header-1'>U P P E R C A S E</h1>
 			<hr width='50%' align='center' />
-			<h2>Welcome to the Official Website!</h2>
-			<p className='band-logo'>
+			<h2 data-testid='home-header-2'>Welcome to the Official Website!</h2>
+			<p data-testid='band-logo' className='band-logo'>
 				<img alt='UPPERCASE-logo.png' src='/UPPERCASE-logo.png' />
 			</p>
-			<p className='page-content'>
+			<p data-testid='page-content' className='page-content'>
 				UPPERCASE is a Filipino-Canadian indie pop rock band from Toronto,
 				Canada pursuing Original Pilipino Music (OPM)
 			</p>
