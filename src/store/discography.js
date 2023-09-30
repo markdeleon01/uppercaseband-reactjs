@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const discographySlice = createSlice({
 	name: 'discography',
 	initialState: { releases: [] },
-	reducers: {
+	reducers: { // actions
         setReleases(state, action) {
             state.releases = action.payload
         }

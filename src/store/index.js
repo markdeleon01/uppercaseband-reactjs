@@ -5,7 +5,7 @@ import eventsReducer from './events'
 
 // only one store!
 const store = configureStore({
-	// map of reducers
+	// map of reducers; Redux will merge all reducers defined here into one reducer
 	reducer: {
 		members: membersReducer,
 		discography: discographyReducer,

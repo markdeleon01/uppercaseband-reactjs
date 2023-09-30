@@ -21,10 +21,10 @@ function Discography() {
 	}, [dispatch])
 
 	return (
-		<div className='discography'>
-			<h1>U P P E R C A S E</h1>
+		<div data-testid='discography' className='discography'>
+			<h1 data-testid='discography-header-1'>U P P E R C A S E</h1>
 			<hr width='50%' align='center' />
-			<h2>Discography</h2>
+			<h2 data-testid='discography-header-2'>Discography</h2>
 			{releases &&
 				releases.map((release) => (
 					<DiscographyListing key={release.title} release={release} />

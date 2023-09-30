@@ -5,10 +5,13 @@ test('renders Home', () => {
   render(<Home />);
 
   // assert main page header
-  const headerElement = screen.getByText(/U P P E R C A S E/i);
-  expect(headerElement).toBeInTheDocument();
+  expect(screen.getByTestId('home-header-1')).toBeInTheDocument();
 
   // assert secondary page header
-  const secondaryHeaderElement = screen.getByText(/Welcome to the Official Website/i);
-  expect(secondaryHeaderElement).toBeInTheDocument();
+  expect(screen.getByTestId('home-header-2')).toBeInTheDocument();
+
+  // assert page components
+  expect(screen.getByTestId('home')).toBeInTheDocument();
+  expect(screen.getByTestId('band-logo')).toBeInTheDocument();
+  expect(screen.getByTestId('page-content')).toBeInTheDocument();
 });

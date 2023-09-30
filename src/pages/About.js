@@ -20,10 +20,10 @@ function About() {
 	}, [dispatch])
 
 	return (
-		<div className='about'>
-			<h1>U P P E R C A S E</h1>
+		<div data-testid='about' className='about'>
+			<h1 data-testid='about-header-1'>U P P E R C A S E</h1>
 			<hr width='50%' align='center' />
-			<h2>Band Members</h2>
+			<h2 data-testid='about-header-2'>Band Members</h2>
 			{members &&
 				members.map((member) => (
 					<p className='member-item' key={member.name}>
@@ -33,10 +33,10 @@ function About() {
 					</p>
 				))}
 			<hr width='50%' align='center' />
-			<p className='band-pic'>
+			<p data-testid='band-pic' className='band-pic'>
 				<img alt='uppercase2019-bandPic.png' src='/uppercase2019-bandPic.png' />
 			</p>
-			<div className='biography'>
+			<div data-testid='biography' className='biography'>
 				<p>
 					Formed in 2009, UPPERCASE is a Filipino-Canadian alternative pop rock
 					indie band from Toronto, Canada pursuing Original Pilipino Music

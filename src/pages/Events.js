@@ -21,10 +21,10 @@ function Events() {
 	}, [dispatch])
 
 	return (
-		<div className='events'>
-			<h1>U P P E R C A S E</h1>
+		<div data-testid='events' className='events'>
+			<h1 data-testid='events-header-1'>U P P E R C A S E</h1>
 			<hr width='50%' align='center' />
-			<h2>Events</h2>
+			<h2 data-testid='events-header-2'>Events</h2>
 			{events &&
 				events.map((event) => <EventListing key={event.id} event={event} />)}
 		</div>
