@@ -3,16 +3,18 @@
 	"version": "0.1.0",
 	"private": true,
 	"jest": {
-		"coverageReporters": ["json-summary"]
+		"coverageReporters": [
+			"json-summary"
+		]
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"coverage": "react-scripts test --coverage",
+		"coverage": "react-scripts test --coverage --watchAll=false",
 		"test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
 		"start-server": "npm start",
-		"test:unit": "npm test -- --coverage --watchAll=false",
+		"test:unit": "npm test -- --watchAll=false",
 		"test:component": "npx cypress run --headless --component",
 		"test:e2e": "npx cypress run --headless --e2e --record --key 2ed0c6e6-64ba-4ed0-a8ca-db2563516170",
 		"test:ci": "start-server-and-test start-server http://localhost:3000 test:e2e",
