@@ -59,6 +59,11 @@ jobs:
           name: Front-End Unit Tests
           command: |
             npm run test:unit
+      # Istanbul coverage
+      - run:
+          name: Istanbul coverage
+          command: |
+            npm run coverage
       # run front-end e2e tests
       - run:
           name: Front-End e2e Tests
